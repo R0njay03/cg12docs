@@ -1,0 +1,78 @@
+/* Body background with gradient + subtle pattern */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Optional subtle pattern overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 10px
+    );
+    pointer-events: none;
+}
+
+/* Container card */
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    max-width: 900px;
+    width: 90%;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn, .btn-back, .btn-edit {
+    transition: all 0.3s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn-back:hover { transform: translateY(-2px); }
+.btn-edit:hover { transform: translateY(-2px); }
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table th {
+    background: #2980b9;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background: rgba(255,255,255,0.6);
+}
